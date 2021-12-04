@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Login from './Login';
 import './index.css';
-import 'bootstrap/dist/css/bootstrap.css';
+import './bootstrap.css';
 
 ReactDOM.render(
   <React.StrictMode>
