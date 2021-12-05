@@ -5,11 +5,10 @@ class Login extends Component {
     
     state = {
         account: { username:'', password:''}
-    };
+    }
         
     //const username = React.createRef();
     //const value = useRef(username);
-    const username = useRef(null);
     
     useEffect(() => {
         if(username) {
@@ -35,7 +34,7 @@ class Login extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input autoFocus ref={username} value={this.state.account.username} onchange={this.handleChange} name="username" id="username" className=  "form-control" type="text" />
+                    <input autoFocus value={this.state.account.username} onchange={this.handleChange} name="username" id="username" className=  "form-control" type="text" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="Password">Password</label>
