@@ -13,13 +13,14 @@ class Login extends Component {
     handleSubmit = e => {
         e.preventDefault();
         // console.log(value);
-    }
+    };
     
     handleChange = e => {
         const account = {...this.state.account};
-        account.username = e.current.value;
-        setState({account});
-    }
+        account.username = e.currentTarget.value;
+        this.setState({account});
+    };
+    
     render() {
     return (
         <div className="container">
@@ -27,7 +28,7 @@ class Login extends Component {
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input autoFocus value={this.state.account.username} onchange={this.handleChange} name="username" id="username" className=  "form-control" type="text" />
+                    <input autoFocus value={this.state.account.username} onChange={this.handleChange} name="username" id="username" className=  "form-control" type="text" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="Password">Password</label>
