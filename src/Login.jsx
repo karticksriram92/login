@@ -5,16 +5,10 @@ class Login extends Component {
     
     state = {
         account: { username:'', password:''}
-    }
+    };
         
     //const username = React.createRef();
     //const value = useRef(username);
-    
-    useEffect(() => {
-        if(username) {
-        username.current.focus();
-        }
-    },[]);
     
     handleSubmit = e => {
         e.preventDefault();
@@ -44,7 +38,7 @@ class Login extends Component {
             </form>
         </div>
   );
-};
+}
 }
 
 
