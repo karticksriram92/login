@@ -1,4 +1,4 @@
-import React, {Component, setState} from 'react';
+import React, {Component} from 'react';
 import './login.css';
 
 class Login extends Component {
@@ -18,7 +18,7 @@ class Login extends Component {
     handleChange = e => {
         const account = {...this.state.account};
         account.username = e.currentTarget.value;
-        setState({account});
+        this.setState({ account });
     };
     
     render() {
