@@ -1,4 +1,4 @@
-import React, {Component, useRef, useEffect} from 'react';
+import React, {Component, useRef, useEffect, setState} from 'react';
 import './login.css';
 
 class Login extends Component {
@@ -12,12 +12,11 @@ class Login extends Component {
     
     handleSubmit = e => {
         e.preventDefault();
-        console.log(username.current.value);
         // console.log(value);
     }
     
     handleChange = e => {
-        const account = {...state.account};
+        const account = {...this.state.account};
         account.username = e.current.value;
         setState({account});
     }
