@@ -18,7 +18,7 @@ class Login extends Component {
     handleChange = e => {
         const account = {...this.state.account};
         account.username = e.currentTarget.value;
-        this.setState({account});
+        setState({account});
     };
     
     render() {
