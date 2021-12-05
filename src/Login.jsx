@@ -2,6 +2,11 @@ import React, {useRef, useEffect} from 'react';
 import './login.css';
 
 function Login() {
+    
+    state = {
+        account: { username:'', password:''}
+    };
+        
     //const username = React.createRef();
     //const value = useRef(username);
     const username = useRef(null);
@@ -18,13 +23,19 @@ function Login() {
         // console.log(value);
     }
     
+    handleChange = e => {
+        const account = {...state.account};
+        account.username = e.current.value;
+        setState({account});
+    }
+    
     return (
         <div className="container">
-            <h1>Login</h1>
+            <h1>Login Form</h1>
             <form onSubmit={handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input autoFocus ref={username} name="username" id="username" className=  "form-control" type="text" />
+                    <input autoFocus ref={username} value={state.account.username} onchange={handleChange} name="username" id="username" className=  "form-control" type="text" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="Password">Password</label>
