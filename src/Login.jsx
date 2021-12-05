@@ -1,7 +1,7 @@
-import React, {useRef, useEffect} from 'react';
+import React, {Component, useRef, useEffect} from 'react';
 import './login.css';
 
-function Login() {
+class Login extends Component {
     
     state = {
         account: { username:'', password:''}
@@ -17,7 +17,7 @@ function Login() {
         }
     },[]);
     
-    const handleSubmit = e => {
+    handleSubmit = e => {
         e.preventDefault();
         console.log(username.current.value);
         // console.log(value);
@@ -28,14 +28,14 @@ function Login() {
         account.username = e.current.value;
         setState({account});
     }
-    
+    render() {
     return (
         <div className="container">
             <h1>Login Form</h1>
-            <form onSubmit={handleSubmit}>
+            <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <input autoFocus ref={username} value={state.account.username} onchange={handleChange} name="username" id="username" className=  "form-control" type="text" />
+                    <input autoFocus ref={username} value={this.state.account.username} onchange={this.handleChange} name="username" id="username" className=  "form-control" type="text" />
                 </div>
                 <div className="form-group">
                     <label htmlFor="Password">Password</label>
@@ -45,6 +45,7 @@ function Login() {
             </form>
         </div>
   );
+};
 }
 
 
