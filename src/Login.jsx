@@ -17,7 +17,7 @@ class Login extends Component {
     
     handleChange = e => {
         const account = {...this.state.account};
-        account.username = e.currentTarget.value;
+        account[e.currentTarget.name] = e.currentTarget.value;
         this.setState({ account });
     };
     
@@ -32,7 +32,7 @@ class Login extends Component {
                 </div>
                 <div className="form-group">
                     <label htmlFor="Password">Password</label>
-                    <input name="password" id="password" className="form-control" type= "password" />
+                    <input value={this.state.account.password} onChange={this.handleChange} name="password" id="password" className="form-control" type= "password" />
                 </div>
                 <button className="btn btn-primary">Submit</button>
             </form>
