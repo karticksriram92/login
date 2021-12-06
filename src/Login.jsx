@@ -15,7 +15,7 @@ class Login extends Component {
         // console.log(value);
     };
     
-    handleChange = { currentTarget:input } => {
+    handleChange = ({ currentTarget:input }) => {
         const account = {...this.state.account};
         account[input.name] = input.value;
         this.setState({ account });
