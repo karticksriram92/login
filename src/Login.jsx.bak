@@ -15,7 +15,7 @@ class Login extends Component {
     handleSubmit = e => {
         e.preventDefault();
 		
-		const errors.username = "username is needed."
+		const errors[username] = "username is needed."
 		this.setState({ errors })
 		if ( errors ) return;
 		
