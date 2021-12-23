@@ -6,6 +6,7 @@ class Login extends Component {
     
     state = {
         account: { username:'', password:''}
+		errors: {}
     };
         
     //const username = React.createRef();
@@ -13,6 +14,11 @@ class Login extends Component {
     
     handleSubmit = e => {
         e.preventDefault();
+		
+		const errors.username = "username is needed."
+		this.setState({ errors })
+		if ( errors ) return;
+		
         // console.log(value);
     };
     
