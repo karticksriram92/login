@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './login.css';
-import '../components/Input.jsx'
+import './components/Input.jsx'
 
 class Login extends Component {
     
