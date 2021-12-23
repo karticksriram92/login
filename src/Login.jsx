@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import './login.css';
-import '../components/Input.jsx'
+import './components/Input.jsx'
 
 class Login extends Component {
     
@@ -12,11 +12,14 @@ class Login extends Component {
     //const username = React.createRef();
     //const value = useRef(username);
     
+	validate = () => {
+			return { username: "username is needed." }
+	}
+	
     handleSubmit = e => {
         e.preventDefault();
-		console.log("enter")
 		
-		const errors["username"] = "username is needed."
+		const errors = this.validate()
 		this.setState({ errors })
 		if ( errors ) return;
 		
