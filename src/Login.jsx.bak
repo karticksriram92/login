@@ -5,15 +5,15 @@ import './components/Input.jsx'
 class Login extends Component {
     
     state = {
-        account: { username:'', password:''}
-		errors: {}
+        account: { username:'', password:''},
+	errors: {}
     };
         
     //const username = React.createRef();
     //const value = useRef(username);
     
 	validate = () => {
-			return { username: "username is needed."}
+			return { username: "username is needed." }
 	}
 	
     handleSubmit = e => {

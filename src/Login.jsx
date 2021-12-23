@@ -5,7 +5,7 @@ import './components/Input.jsx'
 class Login extends Component {
     
     state = {
-        account: { username:'', password:''}
+        account: { username:'', password:''},
 		errors: {}
     };
         
