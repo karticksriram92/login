@@ -43,7 +43,7 @@ class Login extends Component {
                     <label htmlFor="Password">Password</label>
                     <Input value={account.password} name="password" onChange={this.handleChange} />
                 </div>
-                <button className="btn btn-primary">Submit</button>
+                <button className="btn btn-primary">Login</button>
             </form>
         </div>
   );
