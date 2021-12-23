@@ -5,8 +5,8 @@ import './components/Input.jsx'
 class Login extends Component {
     
     state = {
-        account: { username:'', password:''}
-		errors: {}
+        account: { username:'', password:''},
+	errors: {}
     };
         
     //const username = React.createRef();
