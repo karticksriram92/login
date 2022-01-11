@@ -13,7 +13,14 @@ class Login extends Component {
     //const value = useRef(username);
     
 	validate = () => {
-			return { username: "username is needed." }
+		errors = {}
+		
+		account = this.state.account
+		if (account.username).trim() === '':
+			errors.username = "Username is needed"
+		if (account.password).trim() === '':
+			errors.password = "Password is needed"
+		return errors.length === 0 ? null : errors
 	}
 	
     handleSubmit = e => {
@@ -23,7 +30,7 @@ class Login extends Component {
 		this.setState({ errors })
 		if ( errors ) return;
 		
-        // console.log(value);
+        console.log(errors);
     };
     
     handleChange = ({ currentTarget:input }) => {
