@@ -15,10 +15,10 @@ class Login extends Component {
 	validate = () => {
 		errors = {}
 		
-		account = this.state.account
-		if (account.username).trim() === '':
+		const { account } = this.state;
+		if (account.username.trim() === '')
 			errors.username = "Username is needed"
-		if (account.password).trim() === '':
+		if (account.password.trim() === '')
 			errors.password = "Password is needed"
 		return errors.length === 0 ? null : errors
 	}
