@@ -20,8 +20,7 @@ class Login extends Component {
 			errors.username = "Username is needed"
 		if (account.password.trim() === '')
 			errors.password = "Password is needed"
-		console.log(errors.length)
-		return errors.length === 0 ? null : errors
+		return Object.keys(errors).length === 0 ? null : errors;
 	}
 	
     handleSubmit = e => {
