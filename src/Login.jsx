@@ -27,8 +27,8 @@ class Login extends Component {
         e.preventDefault();
 		
 		const errors = this.validate()
-		this.setState({ errors })
-		console.log(errors);
+		this.setState({ errors : errors || null })
+		//console.log(errors);
 		if ( errors ) return;
 		
     };
@@ -40,18 +40,18 @@ class Login extends Component {
     };
     
     render() {
-        const { account } = this.state;
+        const { account, errors } = this.state;
     return (
         <div className="container">
             <h1>Login Form</h1>
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
                     <label htmlFor="username">Username</label>
-                    <Input value={account.username} name="username" onChange={this.handleChange} />
+                    <Input value={account.username} name="username" error={ errors.username } onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
                     <label htmlFor="Password">Password</label>
-                    <Input value={account.password} name="password" onChange={this.handleChange} />
+                    <Input value={account.password} name="password" error={ errors.password } onChange={this.handleChange} />
                 </div>
                 <button className="btn btn-primary">Login</button>
             </form>
