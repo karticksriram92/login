@@ -13,7 +13,7 @@ class Login extends Component {
     //const value = useRef(username);
     
 	validate = () => {
-		errors = {}
+		const errors = {}
 		
 		const { account } = this.state;
 		if (account.username.trim() === '')
