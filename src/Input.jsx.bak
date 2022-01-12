@@ -2,6 +2,7 @@ import React from 'react';
 
 const Input = ({ name, value, error, onChange }) => {
 	return (
+		<div>
 		<input autoFocus 
 			value={value} 
 			onChange={onChange} 
@@ -10,7 +11,8 @@ const Input = ({ name, value, error, onChange }) => {
 			className="form-control" 
 			type="text" 
 		/>
-		{ error && <div className="alert alert-danger">{ errors }</div> }
+		{ error && <div className="alert alert-danger">{ error }</div> }
+		</div>
 )};
 
 export default Input;
