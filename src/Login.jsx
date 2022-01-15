@@ -46,11 +46,9 @@ class Login extends Component {
             <h1>Login Form</h1>
             <form onSubmit={this.handleSubmit}>
                 <div className="form-group">
-                    <label htmlFor="username">Username</label>
                     <Input value={account.username} name="username" error={ errors.username } onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="Password">Password</label>
                     <Input value={account.password} name="password" error={ errors.password } onChange={this.handleChange} />
                 </div>
                 <button className="btn btn-primary">Login</button>

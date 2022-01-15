@@ -3,6 +3,7 @@ import React from 'react';
 const Input = ({ name, value, error, onChange }) => {
 	return (
 		<div>
+		<label htmlFor={name}>{name}</label>
 		<input autoFocus 
 			value={value} 
 			onChange={onChange} 
