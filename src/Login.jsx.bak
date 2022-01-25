@@ -49,7 +49,6 @@ class Login extends Component {
                     <Input value={account.username} name="username" error={ errors.username } onChange={this.handleChange} />
                 </div>
                 <div className="form-group">
-                    <label htmlFor="Password">Password</label>
                     <Input value={account.password} name="password" error={ errors.password } onChange={this.handleChange} />
                 </div>
                 <button className="btn btn-primary">Login</button>

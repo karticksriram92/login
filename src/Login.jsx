@@ -17,9 +17,9 @@ class Login extends Component {
 		
 		const { account } = this.state;
 		if (account.username.trim() === '')
-			errors.username = "Username is needed."
+			errors.username = "Username is needed!!."
 		if (account.password.trim() === '')
-			errors.password = "Password is needed."
+			errors.password = "Password is needed!!."
 		return Object.keys(errors).length === 0 ? null : errors;
 	}
 	
