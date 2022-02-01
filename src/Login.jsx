@@ -27,7 +27,7 @@ class Login extends Component {
         e.preventDefault();
 		
 		const errors = this.validate()
-		this.setState({ errors : errors || null })
+		this.setState({ errors : errors || {} })
 		
 		if ( errors ) return;
 		console.log("submitted");

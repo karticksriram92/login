@@ -30,7 +30,7 @@ class Login extends Component {
 		this.setState({ errors : errors || null })
 		
 		if ( errors ) return;
-		
+		console.log("submitted");
     };
     
     handleChange = ({ currentTarget:input }) => {
