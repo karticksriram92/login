@@ -28,9 +28,9 @@ class Login extends Component {
 		
 		const errors = this.validate()
 		this.setState({ errors : errors || null })
-		//console.log(errors);
-		if ( errors ) return;
 		
+		if ( errors ) return;
+		console.log("submitted");
     };
     
     handleChange = ({ currentTarget:input }) => {
