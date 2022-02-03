@@ -40,6 +40,7 @@ class Login extends Component {
 		if (name.trim() === "Password") {
 			if (value.trim() === "") return value = "Password is required"
 		}
+	}
     
     handleChange = ({ currentTarget:input }) => {
 		const errors = { ...this.state.errors};
