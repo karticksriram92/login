@@ -14,9 +14,9 @@ class Login extends Component {
     //const value = useRef(username);
     
 	schema = {
-		username: Joi.string().required();
-		password: Joi.string().required();
-	}
+		username: Joi.string().required(),
+		password: Joi.string().required()
+	};
 	
 	validate = () => {
 		const result = Joi.validate(this.state.account, schema);
