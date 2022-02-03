@@ -32,11 +32,23 @@ class Login extends Component {
 		if ( errors ) return;
 		console.log("submitted");
     };
+	
+	validateProperty = ({ name, value }) => {
+		if (name.trim() === "Username") {
+			if (value.trim() === "") return value = "Username is required"
+		}
+		if (name.trim() === "Password") {
+			if (value.trim() === "") return value = "Password is required"
+		}
     
     handleChange = ({ currentTarget:input }) => {
+		const errors = { ...this.state.errors};
+		const errorMessages = validateProperty(input);
+		if (errorMessages) errors[input.name] = input.value;
+		else delete errors[input.name];
         const account = {...this.state.account};
         account[input.name] = input.value;
-        this.setState({ account });
+        this.setState({ account, errors });
     };
     
     render() {
