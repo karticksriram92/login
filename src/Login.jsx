@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import Joi from 'joi-browser';
 import './login.css';
 import Input from './Input.jsx';
-import Joi from 'joi-browser';
 
 class Login extends Component {
     
