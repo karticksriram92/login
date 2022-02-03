@@ -34,10 +34,10 @@ class Login extends Component {
     };
 	
 	validateProperty = ({ name, value }) => {
-		if (name.trim() === "Username") {
+		if (name.trim() === "username") {
 			if (value.trim() === "") return value = "Username is required"
 		}
-		if (name.trim() === "Password") {
+		if (name.trim() === "password") {
 			if (value.trim() === "") return value = "Password is required"
 		}
 	}

@@ -35,17 +35,17 @@ class Login extends Component {
 	
 	validateProperty = ({ name, value }) => {
 		if (name.trim() === "username") {
-			if (value.trim() === "") return value = "Username is required"
+			if (value.trim() === "") return "Username is required"
 		}
 		if (name.trim() === "password") {
-			if (value.trim() === "") return value = "Password is required"
+			if (value.trim() === "") return "Password is required"
 		}
 	}
     
     handleChange = ({ currentTarget:input }) => {
 		const errors = { ...this.state.errors};
 		const errorMessages = this.validateProperty(input);
-		if (errorMessages) errors[input.name] = input.value;
+		if (errorMessages) errors[input.name] = errorMessages;
 		else delete errors[input.name];
         const account = {...this.state.account};
         account[input.name] = input.value;
