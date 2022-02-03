@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import './login.css';
 import Input from './Input.jsx'
+import Joi from joi-browser;
 
 class Login extends Component {
     
@@ -12,7 +13,15 @@ class Login extends Component {
     //const username = React.createRef();
     //const value = useRef(username);
     
+	schema = {
+		username: Joi.string().required();
+		password: Joi.string().required();
+	}
+	
 	validate = () => {
+		const result = Joi.validate(this.state.account, schema);
+		console.log(result)
+		
 		const errors = {}
 		
 		const { account } = this.state;
