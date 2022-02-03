@@ -44,7 +44,7 @@ class Login extends Component {
     
     handleChange = ({ currentTarget:input }) => {
 		const errors = { ...this.state.errors};
-		const errorMessages = validateProperty(input);
+		const errorMessages = this.validateProperty(input);
 		if (errorMessages) errors[input.name] = input.value;
 		else delete errors[input.name];
         const account = {...this.state.account};
