@@ -24,7 +24,7 @@ class Login extends Component {
 		if(!result.error) return null;
 		
 		const errors = {};
-		for(let item in result.error) {
+		for(let item in result.error.details) {
 			errors[item.path(0)] = item.message;
 		}
 		return errors;
