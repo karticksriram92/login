@@ -3,7 +3,6 @@ import Joi from 'joi-browser';
 import './login.css';
 import Input from './Input.jsx';
 
-
 class Login extends Component {
     
     state = {
