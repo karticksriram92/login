@@ -19,12 +19,13 @@ class Login extends Component {
 	};
 	
 	validate = () => {
-		const result = Joi.validate(this.state.account, this.schema, { abortEarly:false});
+		const options = { abortEarly:false};
+	const { error } = Joi.validate(this.state.account, this.schema, options);
 		console.log(result);
-		if(!result.error) return null;
+		if(!error) return null;
 		
 		const errors = {};
-		for(let item of result.error.details) {
+		for(let item of error.details) {
 			errors[item.path[0]] = item.message;
 		}
 		return errors;
@@ -42,12 +43,9 @@ class Login extends Component {
     };
 	
 	validateProperty = ({ name, value }) => {
-		if (name.trim() === "username") {
-			if (value.trim() === "") return "Username is required"
-		}
-		if (name.trim() === "password") {
-			if (value.trim() === "") return "Password is required"
-		}
+		const obj = { [name] : value};
+		const { error } = Joi.validate(obj, schema[name]);
+		if (!error) return null : return error.details.message;
 	}
     
     handleChange = ({ currentTarget:input }) => {
