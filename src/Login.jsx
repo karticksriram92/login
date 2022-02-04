@@ -44,7 +44,8 @@ class Login extends Component {
 	
 	validateProperty = ({ name, value }) => {
 		const obj = { [name] : value};
-		const { error } = Joi.validate(obj, schema[name]);
+		const schema = { [name] schema[name]);
+		const { error } = Joi.validate(obj, schema);
 		if (!error) return null : return error.details.message;
 	}
     
