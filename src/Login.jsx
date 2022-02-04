@@ -20,16 +20,14 @@ class Login extends Component {
 	
 	validate = () => {
 		const result = Joi.validate(this.state.account, this.schema, { abortEarly:false});
-		console.log(result)
+		console.log(result)l
+		if(!result.error) return null;
 		
-		const errors = {}
-		
-		if(!result.errors) return;
-		
-		for(let item in result.errors) {
+		const errors = {};
+		for(let item in result.error) {
 			errors[item.path(0)] = item.message;
-		this.setState({ errors });
 		}
+		return errors;
 		
 	}
 	
