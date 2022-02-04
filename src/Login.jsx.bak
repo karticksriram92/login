@@ -24,12 +24,12 @@ class Login extends Component {
 		
 		const errors = {}
 		
-		const { account } = this.state;
-		if (account.username.trim() === '')
-			errors.username = "Username is needed!."
-		if (account.password.trim() === '')
-			errors.password = "Password is needed!."
-		return Object.keys(errors).length === 0 ? null : errors;
+		if(!result.errors) return;
+		
+		for(let item in result.errors) {
+			errors[item.path(0)] = item.message;
+		this.setState({ errors });
+		
 	}
 	
     handleSubmit = e => {

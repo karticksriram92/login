@@ -29,6 +29,7 @@ class Login extends Component {
 		for(let item in result.errors) {
 			errors[item.path(0)] = item.message;
 		this.setState({ errors });
+		}
 		
 	}
 	
