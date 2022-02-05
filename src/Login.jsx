@@ -46,7 +46,8 @@ class Login extends Component {
 		const obj = { [name] : value};
 		const schema = { [name] : this.schema[name]};
 		const { error } = Joi.validate(obj, schema);
-		return (error) ? error.details.message : null;
+		console.log(error);
+		return error ? error.details[0].message : null;
 	}
     
     handleChange = ({ currentTarget:input }) => {
@@ -63,18 +64,18 @@ class Login extends Component {
         const { account, errors } = this.state;
     return (
 		<div className="formbox">
-        <div className="container">
-            <h1>Login Form</h1>
-            <form onSubmit={this.handleSubmit}>
-                <div className="form-group">
-                    <Input value={account.username} name="username" error={ errors.username } onChange={this.handleChange} />
-                </div>
-                <div className="form-group">
-                    <Input value={account.password} name="password" error={ errors.password } onChange={this.handleChange} />
-                </div>
-                <button className="btn btn-primary">Login</button>
-            </form>
-        </div>
+			<div className="container">
+				<h1>Login Form</h1>
+				<form onSubmit={this.handleSubmit}>
+					<div className="form-group">
+						<Input value={account.username} name="username" error={ errors.username } onChange={this.handleChange} />
+					</div>
+					<div className="form-group">
+						<Input value={account.password} name="password" error={ errors.password } onChange={this.handleChange} />
+					</div>
+					<button className="btn btn-primary">Login</button>
+				</form>
+			</div>
 		</div>
   );
 }
