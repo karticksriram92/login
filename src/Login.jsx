@@ -19,7 +19,7 @@ class Login extends Form {
 		password: Joi.string().required()
 	};
 	
-	doSubmit = {
+	doSubmit = () => {
 		console.log("submitted");
 		console.log("update-form elements moved");
 	};

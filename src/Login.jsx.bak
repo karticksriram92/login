@@ -21,7 +21,7 @@ class Login extends Form {
 	
 	doSubmit = {
 		console.log("submitted");
-		console.log("update-form elements moved")
+		console.log("update-form elements moved");
 	};
     
     render() {
