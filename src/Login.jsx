@@ -20,8 +20,8 @@ class Login extends Component {
 	
 	validate = () => {
 		const options = { abortEarly:false};
-	const { error } = Joi.validate(this.state.account, this.schema, options);
-		console.log(result);
+		const { error } = Joi.validate(this.state.account, this.schema, options);
+		
 		if(!error) return null;
 		
 		const errors = {};
