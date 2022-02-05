@@ -46,9 +46,9 @@ class Login extends Component {
 		const obj = { [name] : value};
 		const schema = { [name] : this.schema[name]};
 		const { error } = Joi.validate(obj, schema);
-		console.log(error);
+		// console.log(error);
 		return error ? error.details[0].message : null;
-	}
+	};
     
     handleChange = ({ currentTarget:input }) => {
 		const errors = { ...this.state.errors};
