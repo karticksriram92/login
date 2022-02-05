@@ -62,6 +62,7 @@ class Login extends Component {
     render() {
         const { account, errors } = this.state;
     return (
+		<div className="formbox">
         <div className="container">
             <h1>Login Form</h1>
             <form onSubmit={this.handleSubmit}>
@@ -74,6 +75,7 @@ class Login extends Component {
                 <button className="btn btn-primary">Login</button>
             </form>
         </div>
+		</div>
   );
 }
 }

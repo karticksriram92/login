@@ -1,8 +1,15 @@
-.container {
-   min-width: 392px !important;
-   max-width: 692px !important;
-   background-color: grey;
-   box-shadow: 2px 2px white;
+.formbox {
+	min-width: 392px !important;
+    max-width: 692px !important;
+	margin:auto;
+	margin-top:25px;
+	border: 1px outset #D0D0D0;
+	border-radius:2px;
+	box-shadow: 2px 2px 2px grey;
 }
 
-
+.container {
+	padding: 10px 10px;
+	max-width:inherit;
+	min-width:inherit;
+}
