@@ -73,7 +73,7 @@ class Login extends Component {
 					<div className="form-group">
 						<Input value={account.password} name="password" error={ errors.password } onChange={this.handleChange} />
 					</div>
-					<button className="btn btn-primary">Login</button>
+					<button disabled={this.validate()} className="btn btn-primary">Login</button>
 				</form>
 			</div>
 		</div>
