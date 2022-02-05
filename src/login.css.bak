@@ -1,0 +1,7 @@
+.container {
+   min-width: 392px !important;
+   max-width: 692px !important;
+   box-shadow: 2px 2px white;
+}
+
+
