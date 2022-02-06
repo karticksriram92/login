@@ -60,7 +60,8 @@ class Form extends Component {
 			<div className="form-group">
 				<Input value={data[name]} name={name} type={type} label={label} error={ errors[name] } onChange={this.handleChange} />
 			</div>
-		);
+	);
+	}
 	
 }
 
