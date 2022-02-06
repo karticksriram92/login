@@ -54,10 +54,11 @@ class Form extends Component {
 		);
 	}
 	
-	renderInput(name,label) {
+	renderInput(name, label, type="text") {
+		const { data, errors } = this.state;
 		return (
 			<div className="form-group">
-				<Input value={data[name]} name={label} error={ errors[name] } onChange={this.handleChange} />
+				<Input value={data[name]} name={name} type={type} label={label} error={ errors[name] } onChange={this.handleChange} />
 			</div>
 		);
 	

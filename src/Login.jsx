@@ -24,14 +24,13 @@ class Login extends Form {
 	};
     
     render() {
-        const { data, errors } = this.state;
     return (
 		<div className="formbox">
 			<div className="container">
 				<h1>Login Form</h1>
 				<form onSubmit={this.handleSubmit}>
-					{this.renderInput("username","Username")}
-					{this.renderInput("password","Password")}
+					{this.renderInput("username", "Username")}
+					{this.renderInput("password", "Password", "text")}
 					{this.renderButton("Login")}
 				</form>
 			</div>

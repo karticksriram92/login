@@ -1,7 +1,6 @@
 import React from 'react';
 import Joi from 'joi-browser';
 import './login.css';
-import Input from './Input.jsx';
 import Form from './form.jsx';
 
 class Login extends Form {
@@ -25,7 +24,6 @@ class Login extends Form {
 	};
     
     render() {
-        const { data, errors } = this.state;
     return (
 		<div className="formbox">
 			<div className="container">

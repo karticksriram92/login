@@ -1,5 +1,6 @@
 import { Component } from 'react';
 import Joi from 'joi-browser';
+import Input from './Input.jsx';
 
 class Form extends Component {
 	state = {
@@ -53,10 +54,11 @@ class Form extends Component {
 		);
 	}
 	
-	renderInput(name,label) {
+	renderInput(name, label, type) {
+		const { data, errors } = this.state;
 		return (
 			<div className="form-group">
-				<Input value={data[name]} name={label} error={ errors[name] } onChange={this.handleChange} />
+				<Input value={data[name]} name={name} type={type} label={label} error={ errors[name] } onChange={this.handleChange} />
 			</div>
 		);
 	
