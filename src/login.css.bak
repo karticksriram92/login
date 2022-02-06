@@ -1,6 +1,7 @@
 .formbox {
-	min-width: 392px;
-    max-width: 692px;
+	/* min-width: 392px; */
+    /* max-width: 692px; */
+	width: 30%;
 	margin: auto;
 	margin-top: 25px;
 	border: 1px outset #D0D0D0;
@@ -9,7 +10,7 @@
 }
 
 .container {
-	padding: 10px 10px;
+	padding: 0px 15px 15px 15px !important;
 	max-width: inherit;
 	min-width: inherit;
 }

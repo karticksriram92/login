@@ -1,4 +1,4 @@
-import { Component } from 'react';
+import React, { Component } from 'react';
 import Joi from 'joi-browser';
 
 class Form extends Component {
@@ -46,6 +46,8 @@ class Form extends Component {
         data[input.name] = input.value;
         this.setState({ data, errors });
     };
+	
+	
 }
 
 export default Form;
